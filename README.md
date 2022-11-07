@@ -1,18 +1,17 @@
-Very basic Babylon.js webpages
+# SimpleWars - BabylonJS RTS Game
 
-In a terminal use 
+A simple BabylonJS game project, that can be used as template of RTS-game.
 
-*npm -g install local-web-server*
+The project is supposed to be the work of the community!
 
-to install a simple local web server globally
+## Collection of Open Source Examples
 
-and 
+### Worked / Polished
+Rectangle Selection System and RTS-Camera: https://playground.babylonjs.com/#BDPQFL#15
+Unit Formations: https://playground.babylonjs.com/#1KRC3N#23
+Group Formations: https://playground.babylonjs.com/#YY3KMU#63
 
-with the terminal path at the project folder use
-
-*ws* 
-
-to run the server and use the url address then displayed in your browser to open index.html
-
-In browser add /example.html/ to end of the url address to open the example.html
-
+### Raws
+Rectangle Selection System: https://forum.babylonjs.com/t/2d-rectangle-to-select/23337/5
+RTS-Camera Setup: https://forum.babylonjs.com/t/rts-camera-wasd-move-eq-rotate-mousewheel-zoom-edge-scroll/29289
+Formations: https://github.com/quantuminformation/Density-Wars
