@@ -27,7 +27,8 @@ Unit Formations: https://github.com/quantuminformation/Density-Wars
 - Camera continues moving even after mouse left the scene
 - Lines of Rectangle-Select dragged to the left is displayed like, when dragged to right
 
-## Improvements
+## Demands
+
 - Group Formation: More spacing
 - Pathfinding: RecastJS
 - Group Movement (optional): Caravan
