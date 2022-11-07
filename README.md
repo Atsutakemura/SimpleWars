@@ -1,6 +1,6 @@
 # SimpleWars - BabylonJS RTS Game
 
-A simple game project, uses BabylonJS to run on WebGL.
+A simple game project, that uses BabylonJS to run on WebGL.
 
 ## Idea
 
@@ -10,16 +10,16 @@ Also the project is open for community advices and contributions!
 
 ## Features
 
-- Rectangle Selection System
+- Rectangular Selection System
 - Terrain: Space and Ground (Heightmap)
-- Unit and Group Formations
-- RTS-Camera
+- Circular Unit and Group Formations
+- RTS-Camera (Zoom, Edgescroll, Planar WASD-Move & EQ-Rotate)
 
 ## Collection of Open Source Examples
 
 ### Updated
 
-Rectangle Selection System and RTS-Camera: https://playground.babylonjs.com/#BDPQFL#15
+Rectangular Selection System and RTS-Camera: https://playground.babylonjs.com/#BDPQFL#15
 
 Unit Formations: https://playground.babylonjs.com/#1KRC3N#23
 
@@ -27,7 +27,7 @@ Group Formations: https://playground.babylonjs.com/#YY3KMU#63
 
 ### Raws
 
-Rectangle Selection System: https://forum.babylonjs.com/t/2d-rectangle-to-select/23337/5
+Rectangular Selection System: https://forum.babylonjs.com/t/2d-rectangle-to-select/23337/5
 
 RTS-Camera Setup: https://forum.babylonjs.com/t/rts-camera-wasd-move-eq-rotate-mousewheel-zoom-edge-scroll/29289
 
