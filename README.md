@@ -7,11 +7,17 @@ The project is supposed to be the work of the community!
 ## Collection of Open Source Examples
 
 ### Worked / Polished
+
 Rectangle Selection System and RTS-Camera: https://playground.babylonjs.com/#BDPQFL#15
+
 Unit Formations: https://playground.babylonjs.com/#1KRC3N#23
+
 Group Formations: https://playground.babylonjs.com/#YY3KMU#63
 
 ### Raws
+
 Rectangle Selection System: https://forum.babylonjs.com/t/2d-rectangle-to-select/23337/5
+
 RTS-Camera Setup: https://forum.babylonjs.com/t/rts-camera-wasd-move-eq-rotate-mousewheel-zoom-edge-scroll/29289
+
 Formations: https://github.com/quantuminformation/Density-Wars
