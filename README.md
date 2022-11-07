@@ -7,7 +7,7 @@ The project is supposed to be the work of the community!
 ## Features
 
 - Rectangle Selection System
-- Ground Map: Space and Ground (Heightmap)
+- Terrain: Space and Ground (Heightmap)
 - Unit and Group Formations
 - RTS-Camera
 
