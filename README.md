@@ -30,6 +30,7 @@ Unit Formations: https://github.com/quantuminformation/Density-Wars
 ## Demands
 
 - Group Formation: More spacing
+- Ground Map: Space and Ground (Heightmap)
 - Pathfinding: RecastJS
 - Group Movement (optional): Caravan
 - Regroup: On Unit Death
