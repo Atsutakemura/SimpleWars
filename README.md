@@ -4,7 +4,7 @@ A simple BabylonJS game project, that can be used as template of RTS-game.
 
 The project is supposed to be the work of the community!
 
-##Features
+## Features
 
 - Rectangle Selection System
 - Ground Map: Space and Ground (Heightmap)
