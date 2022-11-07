@@ -2,7 +2,7 @@
 
 A simple BabylonJS game project, that can be used as template of RTS-game.
 
-The project is supposed to be the work of the community!
+The project is open for community contributions!
 
 ## Features
 
