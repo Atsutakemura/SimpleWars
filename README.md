@@ -4,7 +4,7 @@ A simple game project, that uses BabylonJS to run on WebGL.
 
 ## Idea
 
-The game is supposed to encourage RTS-games in BabylonJS and therefore it can be used as a basic template.
+The game is supposed to encourage RTS-games developments in BabylonJS and therefore it can be used as a basic template.
 
 Also the project is open for community advices and contributions!
 
@@ -44,6 +44,8 @@ Unit Formations: https://github.com/quantuminformation/Density-Wars
 - Regroup: On Unit Death
 - Fog of War
 - Pathfinding: RecastJS
+- Server: Worker Threads
+- Server: NullEngine in Workers
 - Group Movement (optional): Caravan
 - Group Behaviour (optional): Swarm
 - Minimap (Interactive)
