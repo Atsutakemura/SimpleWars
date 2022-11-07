@@ -6,7 +6,7 @@ The project is supposed to be the work of the community!
 
 ## Collection of Open Source Examples
 
-### Worked / Polished
+### Updated
 
 Rectangle Selection System and RTS-Camera: https://playground.babylonjs.com/#BDPQFL#15
 
@@ -20,4 +20,17 @@ Rectangle Selection System: https://forum.babylonjs.com/t/2d-rectangle-to-select
 
 RTS-Camera Setup: https://forum.babylonjs.com/t/rts-camera-wasd-move-eq-rotate-mousewheel-zoom-edge-scroll/29289
 
-Formations: https://github.com/quantuminformation/Density-Wars
+Unit Formations: https://github.com/quantuminformation/Density-Wars
+
+## Known Bugs
+
+- Camera continues moving even after mouse left the scene
+- Lines of Rectangle-Select dragged to the left is displayed like, when dragged to right
+
+## Improvements
+- Group Formation: More spacing
+- Pathfinding: RecastJS
+- Group Movement (optional): Caravan
+- Regroup: On Unit Death
+- Group Behaviour (optional): Swarm
+- Minimap (Fog of War, Interactive)
