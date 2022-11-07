@@ -1,19 +1,21 @@
 class Unit {
-    constructor(game, group) {
-        this.game = game;
-        this.scene = game.scene;
+    constructor(group) {
+        this.game = group.game;
+        this.scene = this.game.scene;
         this.group = group;
-        this.selectionManager = game.selectionManager;
-        this.mass = game.unitRegister[group.data['unitlist_unit_id']]['unit_mass']*common.UNIT_SCALE;
-        this.health = game.unitRegister[group.data['unitlist_unit_id']]['unit_structure'];
-        this.speed = game.unitRegister[group.data['unitlist_unit_id']]['unit_speed']*common.SPEED_SCALE;
-        this.range = game.unitRegister[group.data['unitlist_unit_id']]['unit_range'];
-        this.subsidence = game.unitRegister[group.data['unitlist_unit_id']]['unit_ground'];
+        this.selectionManager = this.game.selectionManager;
+		
+        this.mass = this.game.unitRegister[group.data['unitlist_unit_id']]['unit_mass']*common.UNIT_SCALE;
+        this.health = this.game.unitRegister[group.data['unitlist_unit_id']]['unit_structure'];
+        this.speed = this.game.unitRegister[group.data['unitlist_unit_id']]['unit_speed']*common.UNIT_SPEED_SCALE;
+        this.range = this.game.unitRegister[group.data['unitlist_unit_id']]['unit_range'];
+        this.subsidence = this.game.unitRegister[group.data['unitlist_unit_id']]['unit_ground'];
         this.root = BABYLON.MeshBuilder.CreateSphere('unit:mesh', {diameter: this.mass}, this.scene);
         this.root.parent = group.root;
+		this.destination = null;
 
         this.root.material = new BABYLON.StandardMaterial('green', this.scene)
-        if (game.userId === group.ruler.data['user_id']) {
+        if (this.game.userId === group.ruler.data['user_id']) {
             this.root.material.diffuseColor = new BABYLON.Color3(0.4, 0.4, 0.8)
             this.root.material.specularColor = new BABYLON.Color3(0.4, 0.4, 0.8)
         }
@@ -36,15 +38,25 @@ class Unit {
         }));
     }
 
-    takeDamage (amount) {
-        this.health -= amount
+    takeDamage(amount) {
+        this.health -= amount;
         if (this.health < 1) {
-            this.explode()
+			this.group.regroup();
+            this.die();
         }
     }
 
-    explode () {
-        this.root.dispose()
+    explode() {
+        this.root.die();
+    }
+	
+	execute(dT) {	// execute command
+        if(this.root.position.equals(this.destination)) {
+            this.game.selectionManager.removeRegrouped(this);
+        }
+        else {
+            BABYLON.Vector3.LerpToRef(this.root.position, this.destination, dT * this.speed, this.root.position);
+        }
     }
 
     fire() {

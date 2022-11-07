@@ -1,4 +1,4 @@
-class Ruler {   // Player or AI
+class Ruler {   // Player, AI or Neutral
     constructor (game, data, position) {
         this.game = game;
         this.data = data;
@@ -12,26 +12,24 @@ class Ruler {   // Player or AI
             }
 
             for (let i = 0; i < common.START_UNITS.length; i++) {
-                const newGroup = this.addGroup(common.START_UNITS[i]);
-                //newGroup.setCenter();    // set mass center according to amount of units
-                newGroup.setFormation();    // set formation relative to mass center at spawn position
+                this.addGroup(common.START_UNITS[i]);
             }
 
-            this.setFormation(this.buildings[0].root.position.subtract(game.spawnOffset));
+            this.setFormation(this.buildings[0].root.position.subtract(game.spawnOffset));	// set start spawn of unit groups
         }
     }
 
-    addGroup(data) {    // unit amount
+    addGroup(data) {    // unitlist data of DB
         const newGroup = new Group(this.game, this, data);
         this.groups.push(newGroup);
-		if(this.game.userId === this.data['user_id']) {
+		
+		if(this.game.userId === this.data['user_id']) {	// Main Player
 			this.game.userGroups.push(newGroup);
 		}
-        return newGroup;
     }
 
     setFormation(center = BABYLON.Vector3.Zero()) {
-        const formation = Formations.circularGrouping(this.groups, center);
+        const formation = Formations.CircularGrouping(this.groups, center);
         for (let i = 0; i < this.groups.length; i++) {
             this.groups[i].root.position = formation[i];
         }

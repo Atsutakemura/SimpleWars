@@ -1,13 +1,13 @@
 class Formations {
-    static circularGrouping(unformateds, center, height = common.GROUND_Y_SCALE) {
+    static CircularGrouping(unformateds, center, height = common.GROUND_Y_SCALE) {
         if (unformateds.length > 1) {
             const positions = [];
 
             for (let i = 0; i < unformateds.length; i++) {
                 let angleDeg = i * (360 / unformateds.length)
                 let angleRad = (angleDeg / 360) * 2 * Math.PI
-                let customVector = new BABYLON.Vector3(-Math.cos(angleRad) * unformateds[i].mass,
-                height * unformateds[i].subsidence, -Math.sin(angleRad) * unformateds[i].mass)
+                let customVector = new BABYLON.Vector3(-Math.cos(angleRad) * unformateds[i].mass * common.FORMATION_SPACING_SCALE,
+                height * unformateds[i].subsidence, -Math.sin(angleRad) * unformateds[i].mass * common.FORMATION_SPACING_SCALE)
                 positions.push(center.add(customVector))
             }
 
@@ -18,7 +18,7 @@ class Formations {
         }
     }
 
-    static getCentroid(units) {
+    static GetCentroid(units) {
         let totalMass = 0
         let totalX = 0
         let totalZ = 0

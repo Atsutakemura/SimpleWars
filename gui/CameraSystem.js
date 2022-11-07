@@ -559,5 +559,6 @@ class CameraSystem {
 		camera.inputs.add(new FreeCameraMouseWheelInput());
 		
 		this.camera = camera;
+		this.gui = gui;
 	}
 }

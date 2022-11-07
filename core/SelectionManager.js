@@ -6,6 +6,13 @@ class SelectionManager {
 		this.otherUnits = game.otherUnits;
 
         this.Commands = {IDLE:0, ATTACK:1, MOVE:2, DEFEND:3};
+
+        this.selecteds = [];
+        this.commandeds = [];
+		this.regroupeds = [];
+    }
+	
+	addSelection() {	// adds Rectangular Selection and Commands
 		this.mousePos0;
 		this.mousePos1;
 
@@ -24,13 +31,8 @@ class SelectionManager {
 		for(let i = 0; i < 4; i++){
 			this.markers.push(new BABYLON.TransformNode("marker:"+i, this.scene));
 		}
-
-        this.selecteds = [];
-        this.commandeds = [];
-    }
-	
-	addSelection() {
-		this.rectangleSelectObserver = this.scene.onPointerObservable.add((pointerInfo) => {      		
+		
+		this.rectangularSelectObserver = this.scene.onPointerObservable.add((pointerInfo) => {      		
 			switch (pointerInfo.type) {
 				case BABYLON.PointerEventTypes.POINTERMOVE:          
 					if(this.mousePos0) { // pointer was down once before its up
@@ -50,6 +52,8 @@ class SelectionManager {
 						this.lines.position.copyFrom(this.markers[0].position);
 						this.lines.scaling.x = BABYLON.Vector3.Distance(this.markers[0].position, this.markers[1].position);
 						this.lines.scaling.y = -BABYLON.Vector3.Distance(this.markers[0].position, this.markers[2].position);
+						
+						this.lines.lookAt(this.markers[1].position, -Math.PI*0.5);
 
 						//if (mousePos1.x < mousePos0.x)
 						//    lines.scaling.x *= -1;
@@ -163,7 +167,7 @@ class SelectionManager {
         }
     }
 
-    addMoveCommand(destination) {   // selecteds.length must be > 0
+    addMoveCommand(destination) {
         for (let i=0; i<this.selecteds.length; i++) {
             if(this.selecteds[i].commandable) {
                 if(this.commandeds.indexOf(this.selecteds[i]) < 0) {
@@ -178,21 +182,40 @@ class SelectionManager {
 
     addAttackCommand(enemyMesh) {
         for (let i = 0; i < this.selecteds.length; i++) {
-            const direction = Formations.Direction2D(Formations.getCentroid(this.selecteds[i].units), enemyMesh.position)
+            const direction = Formations.Direction2D(Formations.GetCentroid(this.selecteds[i].units), enemyMesh.position)
             if(direction.length() > this.selecteds[i].units[0].range) {
                 const normal = direction.normalize();
                 const destination = enemyMesh.position.subtract(normal.scale(this.selecteds[i].units[0].range));
-                let formation = Formations.circularGrouping(this.selecteds[i].units, destination)
+                let formation = Formations.CircularGrouping(this.selecteds[i].units, destination)
                 for (let j = 0; j < this.selecteds[i].units.length; j++) {
                     this.selecteds[i].units[j].moveTo(formation[j]);
                 }
             }
         }
     }
+	
+	removeRegrouped(entity) {
+        const entityIndex = this.regroupeds.indexOf(entity);
+        if(entityIndex > -1) {
+            this.regroupeds.splice(entityIndex, 1);
+        }
+    }
+	
+	addRegrouped(entity, destination) {
+		if(this.regroupeds.indexOf(entity) < 0) {
+			this.regroupeds.push(entity);
+		}
+
+		entity.destination = destination;
+    }
 
     update(dT) {
         for (let i=0; i<this.commandeds.length; i++) {
             this.commandeds[i].execute(dT);
+        }
+		
+		for (let i=0; i<this.regroupeds.length; i++) {
+            this.regroupeds[i].execute(dT);
         }
     }
 }
