@@ -1,18 +1,38 @@
-Very basic Babylon.js webpages
+# SimpleWars - BabylonJS RTS Game
 
-In a terminal use 
+A simple BabylonJS game project, that can be used as template of RTS-game.
 
-*npm -g install local-web-server*
+The project is supposed to be the work of the community!
 
-to install a simple local web server globally
+## Collection of Open Source Examples
 
-and 
+### Updated
 
-with the terminal path at the project folder use
+Rectangle Selection System and RTS-Camera: https://playground.babylonjs.com/#BDPQFL#15
 
-*ws* 
+Unit Formations: https://playground.babylonjs.com/#1KRC3N#23
 
-to run the server and use the url address then displayed in your browser to open index.html
+Group Formations: https://playground.babylonjs.com/#YY3KMU#63
 
-In browser add /example.html/ to end of the url address to open the example.html
+### Raws
 
+Rectangle Selection System: https://forum.babylonjs.com/t/2d-rectangle-to-select/23337/5
+
+RTS-Camera Setup: https://forum.babylonjs.com/t/rts-camera-wasd-move-eq-rotate-mousewheel-zoom-edge-scroll/29289
+
+Unit Formations: https://github.com/quantuminformation/Density-Wars
+
+## Known Bugs
+
+- Camera continues moving even after mouse left the scene
+- Lines of Rectangle-Select dragged to the left is displayed like, when dragged to right
+
+## Demands
+
+- Group Formation: More spacing
+- Ground Map: Space and Ground (Heightmap)
+- Pathfinding: RecastJS
+- Group Movement (optional): Caravan
+- Regroup: On Unit Death
+- Group Behaviour (optional): Swarm
+- Minimap (Fog of War, Interactive)
