@@ -4,6 +4,13 @@ A simple BabylonJS game project, that can be used as template of RTS-game.
 
 The project is supposed to be the work of the community!
 
+##Features
+
+- Rectangle Selection System
+- Ground Map: Space and Ground (Heightmap)
+- Unit and Group Formations
+- RTS-Camera
+
 ## Collection of Open Source Examples
 
 ### Updated
@@ -22,17 +29,17 @@ RTS-Camera Setup: https://forum.babylonjs.com/t/rts-camera-wasd-move-eq-rotate-m
 
 Unit Formations: https://github.com/quantuminformation/Density-Wars
 
-## Known Bugs
+## Known Issues
 
 - Camera continues moving even after mouse left the scene
 - Lines of Rectangle-Select dragged to the left is displayed like, when dragged to right
+- Group Formation spacing too narrow
 
 ## Demands
 
-- Group Formation: More spacing
-- Ground Map: Space and Ground (Heightmap)
+- Regroup: On Unit Death
+- Fog of War
 - Pathfinding: RecastJS
 - Group Movement (optional): Caravan
-- Regroup: On Unit Death
 - Group Behaviour (optional): Swarm
-- Minimap (Fog of War, Interactive)
+- Minimap (Interactive)
