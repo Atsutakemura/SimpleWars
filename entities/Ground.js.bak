@@ -1,6 +1,6 @@
 class Ground { // ground map (i.e. space or terrain)
    constructor(game, url, type) {
-		if(type === game.mapTypes.SPACE) {
+		if(type === this.mapTypes.SPACE) {
 			this.scene = game.scene;
 			this.selectionManager = game.selectionManager;
 			this.mesh = BABYLON.MeshBuilder.CreatePlane('ground', {width: game.mapSize, height: game.mapSize}, game.scene)

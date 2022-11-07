@@ -53,7 +53,7 @@ class Game {
 		
 		this.selectionManager = new SelectionManager(this);
 		
-		this.ground = new Ground(this, 'assets/textures/background.png', this.mapTypes.SPACE);
+		this.ground = new Ground(this, 'https://raw.githubusercontent.com/Atsutakemura/SimpleWars/main/assets/textures/background.png', this.mapTypes.SPACE);
 
         this.scene.onReadyObservable.add(() => {
             for (let i=0; i<this.users.length; i++) {
