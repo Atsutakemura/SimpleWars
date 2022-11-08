@@ -24,6 +24,7 @@ Also the project is open for community advices and contributions!
 - Group: Unit Group
 - Building
 - Obstacle: Tree, Asteroid
+- Spawnpoint: Capture the Flag
 - Height ~ Ground per Unit
 - Input: Start Entities (Building, Unit) per Ruler, Obstacles per Ground
 - Start: Defender + Base (+ optional Buildings),
@@ -53,11 +54,10 @@ Unit Formations: https://github.com/quantuminformation/Density-Wars
 ## Known Issues
 
 - Camera continues moving even after mouse left the scene
+- Lines of Rectangle-Select dragged to the left is displayed like, when dragged to right
 
 ## Demands
 
-- Start Spawn (Base or Point)
-- Terrain has Capturable Spawnpoints
 - Fog of War
 - Pathfinding: RecastJS
 - Server: Worker Threads
@@ -68,5 +68,4 @@ Unit Formations: https://github.com/quantuminformation/Density-Wars
 
 ## Fixes
 
-- Lines of Rectangle-Select dragged to the left is displayed like, when dragged to right
 - Group Formation spacing too narrow

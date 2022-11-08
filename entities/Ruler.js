@@ -1,32 +1,59 @@
 class Ruler {   // Player, AI or Neutral
-    constructor (game, data, position) {
+    constructor (game, id) {
         this.game = game;
-        this.data = data;
-        this.position = position;
+		
+        this.data = game.users[id];
+		this.role = game.roles[id];
+
+		this.spawns = [];
         this.buildings = [];
         this.groups = [];
 
-        if(data['user_type'] < 1000) {  // not Neutral
-            for(let i=0; i<common.START_BUILDINGS.length; i++) {
-                this.addBuilding(common.START_BUILDINGS[i]);
-            }
+        if(this.data['user_type'] < 1000) {  // not Neutral
+			if(this.role === game.roleTypes.DEFENDER) {
+				this.position = game.ground.constants['ground_spawns'][this.role].scale(game.ground.groundSize);	// start position per user role
+				for(let i=0; i<game.buildlists[this.data['user_id']].length; i++) {
+					this.addBuilding(i);
+				}
+				
+				for (let i=0; i<game.unitlists[this.data['user_id']].length; i++) {
+					this.addGroup(i);
+				}
+				
+				this.setFormation(this.buildings[0].root.position.subtract(game.spawnOffset));	// set start spawn of unit groups
+			}
+			else if(this.role === game.roleTypes.ATTACKER) {
+				this.spawns[0] = game.ground.spawns[this.role];	// start attacker spawn
+				this.position = this.spawns[0].root.position;	// start position per user role
+				this.addGroup(0);	// add start unit group
+				
+				this.reinforces = [];
+				for (let i=1; i<game.unitlists[this.data['user_id']].length; i++) {
+					this.addReinforce(i);
+				}
 
-            for (let i = 0; i < common.START_UNITS.length; i++) {
-                this.addGroup(common.START_UNITS[i]);
-            }
-
-            this.setFormation(this.buildings[0].root.position.subtract(game.spawnOffset));	// set start spawn of unit groups
+				this.setFormation(this.spawns[0].root.position);	// set start spawn of unit groups
+			}
         }
     }
 
-    addGroup(data) {    // unitlist data of DB
-        const newGroup = new Group(this.game, this, data);
+    addGroup(id) {    // unitlist data of DB
+        const newGroup = new Group(this, id);
         this.groups.push(newGroup);
 		
 		if(this.game.userId === this.data['user_id']) {	// Main Player
 			this.game.userGroups.push(newGroup);
 		}
     }
+	
+	addReinforce(id) {    // unitlist data of DB
+        const newGroup = new Group(this, id);
+		newGroup.root.setEnabled(false);
+        this.reinforces.push(newGroup);
+    }
+	
+	spawnReinforce() {	// spawn reinforcement (group) at destination
+	}
 
     setFormation(center = BABYLON.Vector3.Zero()) {
         const formation = Formations.CircularGrouping(this.groups, center);
@@ -35,8 +62,8 @@ class Ruler {   // Player, AI or Neutral
         }
     }
 
-    addBuilding(data) {    // buildlist data of DB
-        const newBuilding = new Building(this.game, this, data);
+    addBuilding(id) {    // id of buildlist data of DB
+        const newBuilding = new Building(this, id);
         this.buildings.push(newBuilding);
     }
 }

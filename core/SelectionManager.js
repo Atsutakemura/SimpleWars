@@ -2,6 +2,7 @@ class SelectionManager {
     constructor(game) {
         this.game = game;
         this.scene = game.scene;
+		this.camera = game.cameraSystem.camera;
 		this.userGroups = game.userGroups;
 		this.otherUnits = game.otherUnits;
 
@@ -53,7 +54,7 @@ class SelectionManager {
 						this.lines.scaling.x = BABYLON.Vector3.Distance(this.markers[0].position, this.markers[1].position);
 						this.lines.scaling.y = -BABYLON.Vector3.Distance(this.markers[0].position, this.markers[2].position);
 						
-						this.lines.lookAt(this.markers[1].position, -Math.PI*0.5);
+						//this.lines.lookAt(this.markers[1].position, -Math.PI/2);
 
 						//if (mousePos1.x < mousePos0.x)
 						//    lines.scaling.x *= -1;
@@ -62,7 +63,7 @@ class SelectionManager {
 					}
 					break;
 				case BABYLON.PointerEventTypes.POINTERDOWN:
-					if(pointerInfo.event.button === 0) {
+					if(pointerInfo.event.button === 0) {	// LMB
 						this.mousePos0 = {x:this.scene.pointerX, y:this.scene.pointerY};
 						let ray0 = this.scene.createPickingRay(this.mousePos0.x, this.mousePos0.y);
 						this.markers[0].position = ray0.origin.add(ray0.direction);
@@ -182,8 +183,8 @@ class SelectionManager {
 
     addAttackCommand(enemyMesh) {
         for (let i = 0; i < this.selecteds.length; i++) {
-            const direction = Formations.Direction2D(Formations.GetCentroid(this.selecteds[i].units), enemyMesh.position)
-            if(direction.length() > this.selecteds[i].units[0].range) {
+            const direction = Formations.Direction2D(Formations.GetCentroid(this.selecteds[i].units), enemyMesh.position);	// direction from center of group units to destination
+            if(direction.length() > this.selecteds[i].units[0].range) {	// destination in unit fire range
                 const normal = direction.normalize();
                 const destination = enemyMesh.position.subtract(normal.scale(this.selecteds[i].units[0].range));
                 let formation = Formations.CircularGrouping(this.selecteds[i].units, destination)
@@ -196,13 +197,13 @@ class SelectionManager {
 	
 	removeRegrouped(entity) {
         const entityIndex = this.regroupeds.indexOf(entity);
-        if(entityIndex > -1) {
+        if(entityIndex > -1) {	// still regrouping
             this.regroupeds.splice(entityIndex, 1);
         }
     }
 	
 	addRegrouped(entity, destination) {
-		if(this.regroupeds.indexOf(entity) < 0) {
+		if(this.regroupeds.indexOf(entity) < 0) {	// not already regrouping
 			this.regroupeds.push(entity);
 		}
 

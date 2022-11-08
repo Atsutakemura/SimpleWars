@@ -1,9 +1,9 @@
 class Group {
-    constructor(ruler, data) {
+    constructor(ruler, id) {
         this.game = ruler.game;
-        this.scene = ruler.game.scene;
+        this.scene = this.game.scene;
         this.ruler = ruler;
-        this.data = data;
+        this.data = this.game.unitlists[ruler.data['user_id']][id];
         this.root = new BABYLON.TransformNode('root', this.scene);
         this.units = [];
         this.mass = 0;
@@ -12,15 +12,15 @@ class Group {
         this.command = this.game.selectionManager.Commands.IDLE;
         this.commandable = true;
 
-        this.addUnits(data);    // create amount of units
+        this.addUnits();    // create amount of units
     }
 
-    addUnits(data) {
-        for (let i = 0; i < data['unitlist_count']; i++) {
-            this.addUnit(data['unitlist_unit_id']);
+    addUnits() {
+        for (let i = 0; i < this.data['unitlist_count']; i++) {
+            this.addUnit();
         }
 		
-		let formation = Formations.CircularGrouping(this.units, BABYLON.Vector3.Zero(), 0);	// start Formation positions
+		const formation = Formations.CircularGrouping(this.units, BABYLON.Vector3.Zero(), 0);	// start Formation positions
         for (let i = 0; i < this.units.length; i++) {
             this.units[i].root.position = formation[i];
         }
@@ -28,8 +28,8 @@ class Group {
 		this.speed = this.units[0] ? this.units[0].speed : 0;
     }
 
-    addUnit(id) {
-        let newUnit = new Unit(this, id);
+    addUnit() {
+        const newUnit = new Unit(this);
         this.mass += newUnit.mass;
         this.units.push(newUnit);
 		
@@ -45,7 +45,7 @@ class Group {
     }
 	
 	regroup(center = BABYLON.Vector3.Zero()) {	// lerp regrouping of units
-		let formation = Formations.CircularGrouping(this.units, center, 0);
+		const formation = Formations.CircularGrouping(this.units, center, 0);
         for (let i = 0; i < this.units.length; i++) {
 			this.game.selectionManager.addRegrouped(this.units[i], formation[i]);
         }

@@ -1,12 +1,12 @@
 class Spawnpoint {
-	constructor(game) {
-		this.game = game;
-		this.scene = scene;
+	constructor(ground, id) {
+		this.game = ground.game;
+		this.scene = this.game.scene;
 
 		this.root = BABYLON.MeshBuilder.CreateSphere('spawn:mesh', {diameter: common.SPAWNPOINT_SCALE}, this.scene);
-        this.root.position = new BABYLON.Vector3(0, 0, 0);
+        this.root.position = ground.constants['ground_spawns'][id].scale(ground.groundSize);
 		
-		this.changeRuler(game.rulers[0]);	// set neutral as ruler
+		this.capturing = 0;	// time of current capture time
 	}
 	
 	changeRuler(ruler) {

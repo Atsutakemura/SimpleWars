@@ -5,16 +5,16 @@ class Unit {
         this.group = group;
         this.selectionManager = this.game.selectionManager;
 		
-        this.mass = this.game.unitRegister[group.data['unitlist_unit_id']]['unit_mass']*common.UNIT_SCALE;
-        this.health = this.game.unitRegister[group.data['unitlist_unit_id']]['unit_structure'];
-        this.speed = this.game.unitRegister[group.data['unitlist_unit_id']]['unit_speed']*common.UNIT_SPEED_SCALE;
-        this.range = this.game.unitRegister[group.data['unitlist_unit_id']]['unit_range'];
-        this.subsidence = this.game.unitRegister[group.data['unitlist_unit_id']]['unit_ground'];
+        this.mass = this.game.unitConstants[group.data['unitlist_unit_id']]['unit_mass']*common.UNIT_SCALE;
+        this.health = this.game.unitConstants[group.data['unitlist_unit_id']]['unit_structure'];
+        this.speed = this.game.unitConstants[group.data['unitlist_unit_id']]['unit_speed']*common.UNIT_SPEED_SCALE;
+        this.range = this.game.unitConstants[group.data['unitlist_unit_id']]['unit_range'];
+        this.subsidence = this.game.unitConstants[group.data['unitlist_unit_id']]['unit_ground'];
         this.root = BABYLON.MeshBuilder.CreateSphere('unit:mesh', {diameter: this.mass}, this.scene);
         this.root.parent = group.root;
 		this.destination = null;
 
-        this.root.material = new BABYLON.StandardMaterial('green', this.scene)
+        this.root.material = new BABYLON.StandardMaterial('material', this.scene)
         if (this.game.userId === group.ruler.data['user_id']) {
             this.root.material.diffuseColor = new BABYLON.Color3(0.4, 0.4, 0.8)
             this.root.material.specularColor = new BABYLON.Color3(0.4, 0.4, 0.8)
@@ -52,7 +52,7 @@ class Unit {
 	
 	execute(dT) {	// execute command
         if(this.root.position.equals(this.destination)) {
-            this.game.selectionManager.removeRegrouped(this);
+            this.selectionManager.removeRegrouped(this);
         }
         else {
             BABYLON.Vector3.LerpToRef(this.root.position, this.destination, dT * this.speed, this.root.position);
@@ -66,9 +66,9 @@ class Unit {
     battle() {
         if(Date.now() - this.lastFire > 1000) { // 1 sec after last fire
             this.validFire = false;
-            for (let i=0; i<this.enemyUnits; i++) {
-                if(Formations.Distance2D(this.root.position, this.enemyUnits[i].root.position) <= this.range) {
-                    this.target = this.enemyUnits[i];
+            for (let i=0; i<this.game.enemyUnits; i++) {
+                if(Formations.Distance2D(this.root.position, this.game.enemyUnits[i].root.position) <= this.range) {
+                    this.target = this.game.enemyUnits[i];
                     this.validFire = true;
                 }
             }
