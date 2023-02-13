@@ -34,9 +34,11 @@ Battle Systems: Damage and Health Systems, Aiming, Attacking, Death Behavior
 
 RTS Camera System (WASD-Move & EQ-Rotate, Zoom, Edgescroll, Swings)
 
-Hire System: Units
+Resource System: Industry for Worker
 
-Crafting System: Currency System, Construction Site, Building (Production, Barracks), Upgrade
+Hire System: Barracks for Units
+
+Crafting System: Construction Site for Building, Upgrade
 
 Research System: Technology (affects damage, health and shield)
 
