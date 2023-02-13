@@ -1,12 +1,12 @@
 # SimpleWars - BabylonJS RTS Game
 
-A simple game project, that uses BabylonJS to run on WebGL.
+A simple game project, that uses BabylonJS to run on WebGL. The project is open for community advices and contributions!
 
-# Idea
+# Intro
 
-The game is supposed to encourage RTS-games developments in BabylonJS and therefore it can be used as a basic template.
+![features](https://user-images.githubusercontent.com/106460589/218599005-1b51c07a-1209-4385-aca0-2d0a41e8e8d4.png)
 
-Also the project is open for community advices and contributions!
+![building](https://user-images.githubusercontent.com/106460589/218599026-4ee2d887-8480-4fba-b314-123437bcaff4.png)
 
 # Details
 
