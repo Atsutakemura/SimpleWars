@@ -1,6 +1,6 @@
-# SimpleWars - BabylonJS RTS Game
+# Engage on Fulwia - BabylonJS RTS Game
 
-A simple game project, that uses BabylonJS to run on WebGL. The project is open for community advices and contributions!
+A real-time strategy game project, that uses BabylonJS to run on WebGL. The project is open for community advices and contributions!
 
 # Intro
 
