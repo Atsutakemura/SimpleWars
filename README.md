@@ -6,10 +6,7 @@ A commercial real-time strategy game project, that uses BabylonJS to run on WebG
 All Flags are listed in config/Types.js
 
 # Faction System
-Party, Ruler
-
-# Role System
-Role i.e. Attacker, Defender, Neutral or None per Party
+Every Ruler (Human, AI) can be assigned to a Party, that plays a certain Role in the game. Roles are Attacker, Defender, Neutral or None. None is used for Obstacles e.g. resources, contrary to a Neutral Party that can be attacked.
 
 # Spawn, Conquest and Reinforce System
 
@@ -77,7 +74,7 @@ Worker collect and Industry refactor resources
 Holiversity to upgrade Technology, that affects damage, health and shield.
 
 # Hero System
-Skills (Melee, Ranged, Magic, Heal, Buff), Level, Stats
+Skills (Melee, Ranged, Magic, Heal, Buff), Level, Stats (Strength, Affinity, Agility)
 
 # Ground System
 
