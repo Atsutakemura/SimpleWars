@@ -2,17 +2,27 @@
 
 A real-time strategy game project, that uses BabylonJS to run on WebGL. The project is open for community advices and contributions!
 
-# Intro
+# Spawn and Conquest System
+
+![Spawn](https://user-images.githubusercontent.com/106460589/218605803-a097f630-f564-4174-a60d-c663aa4078af.png)
+
+Capture the Flag on Spawn
+
+# 
 
 ![features](https://user-images.githubusercontent.com/106460589/218599005-1b51c07a-1209-4385-aca0-2d0a41e8e8d4.png)
 
+# Crafting System
+
+Construction Site for Building, Upgrade
+
+# Hire System
+
 ![building](https://user-images.githubusercontent.com/106460589/218599026-4ee2d887-8480-4fba-b314-123437bcaff4.png)
 
-# Details
+Barracks for Units
 
-Conquest System: Spawn (Capture the Flag)
-
-Ground System: Space, Terrain, Obstacle (Tree, Rock)
+# Ground System: Space, Terrain, Obstacle (Tree, Rock)
 
 Faction System: Party (Roles), Ruler
 
@@ -35,10 +45,6 @@ Battle Systems: Damage and Health Systems, Aiming, Attacking, Death Behavior
 RTS Camera System (WASD-Move & EQ-Rotate, Zoom, Edgescroll, Swings)
 
 Resource System: Industry for Worker
-
-Hire System: Barracks for Units
-
-Crafting System: Construction Site for Building, Upgrade
 
 Research System: Technology (affects damage, health and shield)
 
