@@ -50,7 +50,7 @@ Reinforce System
 
 Battle Effects: Smoke, Fire, Explosion
 
-GUI: Menu, Selection Info, Craft/Hire Panel, Health Bars, Tooltip, Queue Progress
+GUI: Custom Menu (Graphics, Audio, Control, Resume, Rematch, Remap, Exit), Selection Info, Craft/Hire Panel, Health Bars, Tooltip, Queue Progress
 
 Design Management: GUI and Convenience Settings
 
