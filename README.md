@@ -106,11 +106,11 @@ Set Custom Menu i.e. title and buttons.
 
 ![Selection Info](https://user-images.githubusercontent.com/106460589/218612704-5e490c16-edab-49c0-b83b-c66b8e2e4213.png)
 
-Set Custom Selection Info Mask.
+Set Custom Selection Info Mask providing image source, text string and rgb color.
 
 ![craft pad](https://user-images.githubusercontent.com/106460589/218613030-29b20a59-7bb6-4a92-8ed9-4c27d8eaf07e.png)
 
-Pad/Panel to craft building or hire units.
+Pad/Panel to craft building or hire units. Different entities can be queued simultaneously.
 
 Health Bars i.e. shield and health above entity.
 
