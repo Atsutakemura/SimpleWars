@@ -96,6 +96,8 @@ Draw Rectangle to select multiple groups / entities.
 
 [smoke.webm](https://user-images.githubusercontent.com/106460589/218627486-00417259-b943-4660-8afe-12f8d5a11fa0.webm)
 
+[fire.webm](https://user-images.githubusercontent.com/106460589/218627695-f3380442-83d7-49af-8201-a643cc6e0e55.webm)
+
 Management of ParticleSystemSets e.g. Smoke, Fire, Explosion
 
 # Languages
