@@ -41,7 +41,10 @@ Hover, Walk (Animated), Tracked (Dynamic UV Scaling), Flying
 Support Unit Idle, Sprint and Attack.
 
 # Series System
-Custom Attachs or other Hardpoints to interact with parts of entities. The name of the entity's main hull is expected to be 'M_H'. Hardpoints can be interactive (targetable) or not (w/o GUI). They can even be weapons i.e. turrets that aims and attacks seperately.
+
+![hps cruiser](https://user-images.githubusercontent.com/106460589/218625280-cfff62e8-5aa5-493c-b7d4-3686a6be2430.png)
+
+Custom Attachs or other Hardpoints to interact with parts of entities. The name of the entity's main hull is expected to be 'M_H'. Hardpoints can be interactive (targetable) or not (w/o GUI). They can even be weapons i.e. turrets that aims and attacks seperately. Check out image on [Selection Focus](https://github.com/Atsutakemura/ToolShop).
 
 # Formations
 
