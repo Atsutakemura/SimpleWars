@@ -23,7 +23,7 @@ You can spawn (reinforce) at conquered Spawn i.e. spaceship drops ground entitie
 
 ![Craft Plane](https://user-images.githubusercontent.com/106460589/218614220-825f4e91-e5da-457c-a657-76b1ca90886b.png)
 
-Construction Site to craft Building. Upgrade Possibilities.
+Planar Foundation is red if area on pointer is blocked and green when Construction Site to craft Building, can be set. Additionally it is possible to Upgrade Building Levels.
 
 # Hire System
 
