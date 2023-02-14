@@ -94,11 +94,7 @@ Draw Rectangle to select multiple groups / entities.
 
 # Battle Effects
 
-![fire](https://user-images.githubusercontent.com/106460589/218626260-56947afc-ae78-4fd0-ab04-e34aa13c02a1.gif)
-
-![smoke](https://user-images.githubusercontent.com/106460589/218626432-662067e2-3a17-43db-ade0-4458b87ba4fc.gif)
-
-![explosion](https://user-images.githubusercontent.com/106460589/218626788-6d68994d-3340-404a-aa4f-63d532038ac8.gif)
+[smoke.webm](https://user-images.githubusercontent.com/106460589/218627486-00417259-b943-4660-8afe-12f8d5a11fa0.webm)
 
 Management of ParticleSystemSets e.g. Smoke, Fire, Explosion
 
