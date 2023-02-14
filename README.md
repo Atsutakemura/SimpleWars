@@ -2,63 +2,89 @@
 
 A real-time strategy game project, that uses BabylonJS to run on WebGL. The project is open for community advices and contributions!
 
-# Spawn and Conquest System
+# Spawn, Conquest and Reinforce System
 
 ![Spawn](https://user-images.githubusercontent.com/106460589/218605803-a097f630-f564-4174-a60d-c663aa4078af.png)
 
-Capture the Flag on Spawn
-
-# 
-
-![features](https://user-images.githubusercontent.com/106460589/218599005-1b51c07a-1209-4385-aca0-2d0a41e8e8d4.png)
+Capture the Flag on Spawn using HighlightLayer or GlowLayer per Party.
 
 # Crafting System
 
-Construction Site for Building, Upgrade
+![features](https://user-images.githubusercontent.com/106460589/218599005-1b51c07a-1209-4385-aca0-2d0a41e8e8d4.png)
+
+Construction Site to craft Building. Upgrade Possibilities.
 
 # Hire System
 
 ![building](https://user-images.githubusercontent.com/106460589/218599026-4ee2d887-8480-4fba-b314-123437bcaff4.png)
 
-Barracks for Units
+Barracks to hire Units.
 
-# Ground System: Space, Terrain, Obstacle (Tree, Rock)
+# Ground System
 
-Faction System: Party (Roles), Ruler
+Creates Ground from Heightmap as Space or Terrain and can inherit Obstacles i.e. Trees and Rocks. Supports TerrainMaterial and MixMaterial.
 
-Movements: Hover, Walk, Tracked, Flying
+# Faction System
+Party, Ruler
 
-Animation Control: Unit
+# Role System
+Role i.e. Attacker, Defender, Neutral or None per Party
 
-Series System: Custom Attachs/Hardpoints
+# Movements
+Hover, Walk, Tracked, Flying
 
-Formations: Rectangular, Circular, Group
+# Animation Management
+Support Unit Idle, Sprint and Attack
 
-Navigation Systems: Pathfinding (RecastJS), Command System (Move, Attack, Gather, Craft, Patrol, Follow, Skill)
+# Series System
+Custom Attachs/Hardpoints
 
-Targeting System: Auto-Detection
+# Formations
+Rectangular, Circular, Group
 
-Solid Particle Management: Projectiles, Custom Behaviours
+# Navigation Systems
+Pathfinding (RecastJS), Command System (Move, Attack, Gather, Craft, Patrol, Follow, Skill)
 
-Battle Systems: Damage and Health Systems, Aiming, Attacking, Death Behavior
+# Targeting System
+Auto-Detection of Enemies in Unit Detection Range.
 
-RTS Camera System (WASD-Move & EQ-Rotate, Zoom, Edgescroll, Swings)
+# Solid Particle Management
+Set Custom Projectiles and Behaviours
 
-Resource System: Industry for Worker
+# Battle Systems
+Damage and Health Systems, Aiming, Attacking, Death Behavior
 
-Research System: Technology (affects damage, health and shield)
+# RTS Camera System
+WASD-Move & EQ-Rotate, Zoom, Edgescroll, Swings
 
-Hero System: Skills, Level
+# Resource System
+Worker collect and Industry refactor resources
 
-Selection Management: Single and Rectangular Selection
+# Research System
+Holiversity to upgrade Technology, that affects damage, health and shield.
 
-Reinforce System
+# Hero System
+Skills (Melee, Ranged, Magic, Heal, Buff), Level
 
-Battle Effects: Smoke, Fire, Explosion
+# Selection Management:
+Single Selection via Left-Click on Entity, i.e. Unit, Building or Obstacle.
 
-GUI: Custom Menu (Graphics, Audio, Control, Resume, Rematch, Remap, Exit), Selection Info, Craft/Hire Panel, Health Bars, Tooltip, Queue Progress
+![marquee](https://user-images.githubusercontent.com/106460589/218607433-bbfe67c6-86c4-46de-9b51-b5d167bba621.png)
 
-Design Management: GUI and Convenience Settings
+Rectangular Selection
+
+# Battle Effects
+Smoke, Fire, Explosion
+
+# Languages
+Set data for supported languages, i.e. UNIT1 to name unit of id 1.
+
+# GUI
+Custom Menu (Graphics, Audio, Control, Resume, Rematch, Remap, Exit), Selection Info, Craft/Hire Panel, Health Bars, Tooltip, Queue Progress
+
+# Design Management
+
+GUI and Convenience Settings
 
 # Known Issues
 
