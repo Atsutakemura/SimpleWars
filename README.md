@@ -80,7 +80,12 @@ Smoke, Fire, Explosion
 Set data for supported languages, i.e. UNIT1 to name unit of id 1.
 
 # GUI
-Custom Menu (Graphics, Audio, Control, Resume, Rematch, Remap, Exit), Selection Info, Craft/Hire Panel, Health Bars, Tooltip, Queue Progress
+
+![Menu](https://user-images.githubusercontent.com/106460589/218610480-6bfcc775-ecf8-436a-b367-1c29e04e2799.png)
+
+Custom Menu
+
+Selection Info, Craft/Hire Panel, Health Bars, Tooltip, Queue Progress
 
 # Design Management
 
@@ -92,5 +97,6 @@ GUI and Convenience Settings
 
 # Demands
 
+- Formation: Dynamic
 - Fog of War
 - Minimap (Interactive)
