@@ -2,6 +2,9 @@
 
 A commercial real-time strategy game project, that uses BabylonJS to run on WebGL. The project is open for community advices and contributions!
 
+# Flag System
+All Flags are listed in config/Types.js
+
 # Faction System
 Party, Ruler
 
@@ -13,6 +16,8 @@ Role i.e. Attacker, Defender, Neutral or None per Party
 ![Spawn](https://user-images.githubusercontent.com/106460589/218605803-a097f630-f564-4174-a60d-c663aa4078af.png)
 
 Capture the Flag on Spawn using HighlightLayer or GlowLayer per Party.
+
+You can spawn (reinforce) at conquered Spawn i.e. spaceship drops ground entities.
 
 # Crafting System
 
@@ -27,13 +32,17 @@ Construction Site to craft Building. Upgrade Possibilities.
 Barracks to hire Units.
 
 # Movements
-Hover, Walk (Support Animations), Tracked (Dynamic UV Texturing), Flying
+
+Hover, Walk (Animated), Tracked (Dynamic UV Scaling), Flying
 
 # Animation Management
+
+![sprint animations](https://user-images.githubusercontent.com/106460589/218614851-688e0ce0-4a52-4b15-a8b1-e53316ed2444.png)
+
 Support Unit Idle, Sprint and Attack.
 
 # Series System
-Custom Attachs or other Hardpoints to interact with parts of entities.
+Custom Attachs or other Hardpoints to interact with parts of entities. The name of the entity's main hull is expected to be 'M_H'. Hardpoints can be interactive (targetable) or not (w/o GUI). They can even be weapons i.e. turrets that aims and attacks seperately.
 
 # Formations
 
