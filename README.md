@@ -93,7 +93,10 @@ Single Selection via Left-Click on Entity, i.e. Unit, Building or Obstacle.
 Draw Rectangle to select multiple groups / entities.
 
 # Battle Effects
-Smoke, Fire, Explosion
+
+![smoke](https://user-images.githubusercontent.com/106460589/218625707-af45c3b7-11d4-405d-a5ec-5f33c46144c9.png)
+
+Management of ParticleSystemSets e.g. Smoke, Fire, Explosion
 
 # Languages
 Set data for supported languages, i.e. UNIT1 to name unit of id 1. Can be accessed via Languages.EN.UNIT1.
