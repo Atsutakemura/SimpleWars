@@ -125,6 +125,10 @@ Supports Custom Tooltips.
 
 Visual Queue Progress for i.e. crafting and hiring.
 
+# Interactive Minimap
+
+The Minimap is attached to camera position and camera rotation visualized by marker icon rotation. Click on map to swing camera to world position.
+
 # Design Management
 
 GUI and Convenience Settings
@@ -135,6 +139,6 @@ GUI and Convenience Settings
 
 # Demands
 
+- 3rd Person Hero Control
 - Formation: Dynamic
 - Fog of War
-- Minimap (Interactive)
