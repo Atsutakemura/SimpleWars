@@ -1,0 +1,15 @@
+const GroundTypes = {SPACE:1, TERRAIN:2};
+//const EntityCategories = {NONE:0, ENERGY:1, OBSTACLE:2, LIFE:3, BATTLE:4};
+const EntityTypes = {GROUND:1, SPAWN:2, BUILDING:5, UNIT:6, TECHNOLOGY:7, OBSTACLE:8, ATTACH:10};
+const BuildingTypes = {CIVIL:1, PRODUCTION:2, HIREMENT:3, GRADUDATION:4};
+const UnitTypes = {DROID:1, INFANTRY:2, VEHICLE:3, TANK:4, SPACESHIP:5, HERO:6};
+const MoveTypes = {NONE:0, HOVER:1, WALK:2, WHEELED:3, TRACKED:4, FLYING:5};
+const RoleTypes = {NONE:0, NEUTRAL:1, DEFENDER:2, ATTACKER:3};
+const MovePhases = {IDLE:0, MOVE:1, TURN:2, ACCEL:3};
+const CommandTypes = {IDLE:0, ATTACK:1, PATROL:2, CRAFT:3, GATHER:4, REGATHER:5, FOLLOW:6, SKILL:7};
+const PenetrationTypes = {NONE:0, ALL:1, HEALTH:2, SHIELD:3};
+const SkillTypes = {MELEE:1, RANGED:2, HEAL:3, BUFF:4};
+const SkillTargets = {NONE:0, ALL:1, SINGLE:2, AOE:3};
+const CombatPhases = {IDLE:0, AIM:1, ATTACK:2};
+const ComboPhases = {IDLE:0, AIM:1, ATTACK:2, WHIRL:4, CHASE:5, BLOCK:6};
+const DamageTypes = {NONE:0, ALL:1, PHYSICAL:2, MAGIC:3};
