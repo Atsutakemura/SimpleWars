@@ -56,7 +56,7 @@ Rectangular, Circular, Group
 Pathfinding (RecastJS), Command System (Move, Attack, Gather, Craft, Patrol, Follow, Skill)
 
 # Targeting System
-Auto-Detection of Enemies in Unit Detection Range.
+Auto-Detection of Enemies in Unit Detection Range. Auto-Detection is skipped when Attack Command is active.
 
 # Solid Particle Management
 Set Custom Projectiles and Behaviours
