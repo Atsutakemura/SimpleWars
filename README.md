@@ -19,7 +19,7 @@ Capture the Flag on Spawn using HighlightLayer or GlowLayer per Party.
 
 ![reinforce tab](https://user-images.githubusercontent.com/106460589/218619833-d4575145-36d6-490e-8085-3b19a6798bf0.png)
 
-You can spawn (reinforce) at conquered Spawn i.e. spaceship drops ground entities.
+You can spawn (reinforce) at conquered Spawn i.e. spaceship drops ground entities. Projection will be red if not in Spawn range.
 
 # Crafting System
 
