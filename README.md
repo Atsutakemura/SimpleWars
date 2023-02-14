@@ -20,10 +20,6 @@ Construction Site to craft Building. Upgrade Possibilities.
 
 Barracks to hire Units.
 
-# Ground System
-
-Creates Ground from Heightmap as Space or Terrain and can inherit Obstacles i.e. Trees and Rocks. Supports TerrainMaterial and MixMaterial.
-
 # Faction System
 Party, Ruler
 
@@ -66,12 +62,16 @@ Holiversity to upgrade Technology, that affects damage, health and shield.
 # Hero System
 Skills (Melee, Ranged, Magic, Heal, Buff), Level
 
+# Ground System
+
+Creates Ground from Heightmap as Space or Terrain and can inherit Obstacles i.e. Trees and Rocks. Supports TerrainMaterial and MixMaterial. Set Custom Constants, onMatchStart() and onMatchEnd(winnerParty).
+
 # Selection Management:
 Single Selection via Left-Click on Entity, i.e. Unit, Building or Obstacle.
 
 ![marquee](https://user-images.githubusercontent.com/106460589/218607433-bbfe67c6-86c4-46de-9b51-b5d167bba621.png)
 
-Rectangular Selection
+Draw Rectangle to select multiple groups / entities.
 
 # Battle Effects
 Smoke, Fire, Explosion
