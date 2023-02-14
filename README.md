@@ -98,6 +98,8 @@ Draw Rectangle to select multiple groups / entities.
 
 ![smoke](https://user-images.githubusercontent.com/106460589/218626432-662067e2-3a17-43db-ade0-4458b87ba4fc.gif)
 
+![explosion](https://user-images.githubusercontent.com/106460589/218626788-6d68994d-3340-404a-aa4f-63d532038ac8.gif)
+
 Management of ParticleSystemSets e.g. Smoke, Fire, Explosion
 
 # Languages
