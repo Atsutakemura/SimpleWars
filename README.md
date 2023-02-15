@@ -18,6 +18,9 @@ Capture the Flag on Spawn using HighlightLayer or GlowLayer per Party.
 
 You can spawn (reinforce) at conquered Spawn i.e. spaceship drops ground entities. Projection will be red if not in Spawn range.
 
+# Resource System
+Create Custom Resources. Worker collect and Industry refactor resources.
+
 # Crafting System
 
 ![Craft Plane](https://user-images.githubusercontent.com/106460589/218614220-825f4e91-e5da-457c-a657-76b1ca90886b.png)
@@ -30,7 +33,7 @@ Planar Foundation is red if area on pointer is blocked and green when Constructi
 
 Barracks to hire Units.
 
-# Movements
+# Movement Systems
 
 Hover, Walk (Animated), Tracked (Dynamic UV Scaling), Flying
 
@@ -46,7 +49,7 @@ Support Unit Idle, Sprint and Attack.
 
 Custom Attachs or other Hardpoints to interact with parts of entities. The name of the entity's main hull is expected to be 'M_H'. Hardpoints can be interactive (targetable) or not (w/o GUI). They can even be weapons i.e. turrets that aims and attacks seperately. Check out image on [Selection Focus](https://github.com/Atsutakemura/ToolShop).
 
-# Formations
+# Formations Management
 
 ![Rectangle Formation](https://user-images.githubusercontent.com/106460589/218611076-e0ea039f-a9e2-484b-91dd-238fe83731eb.png)
 
@@ -55,20 +58,28 @@ Rectangular, Circular, Group
 # Navigation Systems
 Pathfinding (RecastJS), Command System (Move, Attack, Gather, Craft, Patrol, Follow, Skill)
 
-# Targeting System
-Auto-Detection of Enemies in Unit Detection Range. Auto-Detection is skipped when Attack Command is active.
+# Battle Systems
 
-# Solid Particle Management
+## Health and Shield System
+All life entities got health and shield (>=0). The health can be healed or repaired, while the shield charges up.
+
+## Targeting System
+Auto-Detection of Enemies in Unit Detection Range as Target. Also parts of a entity can be locked as subtarget. Auto-Detection is skipped when Attack Command is active.
+
+## Aiming System
+The Hardpoints of an entity aims i.e. rotate turret and barrel towards the target and validate if projectile would cross target body.
+
+## Solid Particle Management
 Create multiple Solid Particle Systems. Each consisting multiple Solid Particle Groups to set Custom Projectiles and Behaviours. The Projectiles  are buffered by Groups to prevent performance loss in large battles.
 
-# Battle Systems
-Damage and Health Systems, Aiming, Attacking, Death Behavior
+## Damage System
+Targets in combat range will be attacked. The damage caused can be of different types i.e. physical that does not interact with the certain shield.
+
+## Death System
+Infantry Entities use Death Animation to fall over and Structure Entities can smoke, burn, explode partly and explode as a whole.
 
 # Camera System
 WASD-Move & EQ-Rotate, Zoom, Edgescroll, Swings
-
-# Resource System
-Worker collect and Industry refactor resources
 
 # Research System
 
