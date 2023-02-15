@@ -59,7 +59,7 @@ Pathfinding (RecastJS), Command System (Move, Attack, Gather, Craft, Patrol, Fol
 Auto-Detection of Enemies in Unit Detection Range. Auto-Detection is skipped when Attack Command is active.
 
 # Solid Particle Management
-Set Custom Projectiles and Behaviours
+Create multiple Solid Particle Systems. Each consisting multiple Solid Particle Groups to set Custom Projectiles and Behaviours.
 
 # Battle Systems
 Damage and Health Systems, Aiming, Attacking, Death Behavior
