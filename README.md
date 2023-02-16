@@ -118,7 +118,7 @@ Set data for supported languages, i.e. UNIT1 to name unit of id 1. Can be access
 
 ![Menu](https://user-images.githubusercontent.com/106460589/218610480-6bfcc775-ecf8-436a-b367-1c29e04e2799.png)
 
-Set Custom Menu i.e. title and buttons.
+Set Custom Menu i.e. title, buttons and structure.
 
 ![Selection Info](https://user-images.githubusercontent.com/106460589/218612704-5e490c16-edab-49c0-b83b-c66b8e2e4213.png)
 
