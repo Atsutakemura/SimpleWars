@@ -61,7 +61,7 @@ Pathfinding (RecastJS), Command System (Move, Attack, Gather, Craft, Patrol, Fol
 # Battle Systems
 
 ## Health and Shield System
-All life entities got health and shield (>=0). The health can be healed or repaired, while the shield charges up.
+All life entities got health and optionally shield. The health can be healed or repaired, while the shield charges up.
 
 ## Targeting System
 Auto-Detection of Enemies in Unit Detection Range as Target. Also parts of a entity can be locked as subtarget. Auto-Detection is skipped when Attack Command is active.
