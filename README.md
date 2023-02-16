@@ -144,7 +144,7 @@ The Minimap is attached to camera position and camera rotation visualized by mar
 
 # Design Management
 
-GUI and Convenience Settings
+Centralized GUI and Convenience Settings.
 
 # Optimization
 
