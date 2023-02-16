@@ -140,7 +140,7 @@ Visual Queue Progress for i.e. crafting and hiring.
 
 ![Minimap](https://user-images.githubusercontent.com/106460589/219248954-2c14db45-b9ba-41c8-b111-e30f306f7ea2.png)
 
-The Minimap is attached to camera position and camera rotation visualized by marker icon rotation. Click on map to swing camera to world position. Set SVG Paths to create Custom Icons for individual Entities. Support Dynamic, Static and Grouped Entities.
+The Minimap is attached to camera position and camera rotation visualized by marker icon rotation. Click on map to swing camera to world position. Set SVG Paths to create Custom Icons for individual Entities. Use mouse wheel (scroll) to zoom in or out. Support Dynamic, Static and Grouped Entities.
 
 # Design Management
 
