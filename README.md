@@ -136,6 +136,10 @@ Supports Custom Tooltips.
 
 Visual Queue Progress for i.e. crafting and hiring.
 
+# Detection and Visibility
+
+The isVisible-property of unallied entity roots is set by detection ranges of controlled entities.
+
 # Interactive Minimap
 
 ![Minimap](https://user-images.githubusercontent.com/106460589/219248954-2c14db45-b9ba-41c8-b111-e30f306f7ea2.png)
@@ -150,7 +154,9 @@ Centralized GUI and Convenience Settings.
 
 The regarding materials are frozen to reduce shaders overhead. The world matrices of static entities are frozen to reduce world matrix computation. Material, Mesh, are instantiated or cloned to reduce draw calls. The stencil and depth buffer clearing is skipped to reduce OpenGL clear calls. The animation ratio is used to flatten the frame rate differences. The material dirty mechanism is blocked to avoid bottleneck when various materials are used. A map of geometry ids is used to speed-up the addition and removal of Geometry in the scene. After a match ends on disposing of all meshes the active meshes and rendering groups are blocked to speed-up the removal.
 
-Optionally skipPointerMovePicking can be set to spare scene to pick on pointer move, though the health bars won't be shown on hover.
+Options:
+- skipPointerMovePicking can be set to spare scene to pick on pointer move, though the health bars won't be shown on hover.
+- onlyDetectedVisible can be set, so visibility is determined by detection range.
 
 # Known Issues
 
