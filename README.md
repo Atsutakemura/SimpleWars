@@ -90,7 +90,7 @@ The camera can be **moved** by arrow keys and WASD. Rotation is apllied by EQ. T
 The **research** building allows to upgrade **technology**, that affects damage, health and shield.
 
 # Skill System
-The Skills (Melee, Ranged, Magic, Heal, Buff)
+Skills can be **melee** e.g. whirlwind, heal or buff. While other skills are **ranged** i.e. physical or magical projectile. All skills are applied on **area of effects**.
 
 # Hero System
 A hero can obtain experience to increase its level, while leveling difficulty can be adjusted. The higher **leveling**-property of GroundSystem the slower experiencing is in general. While the **levelingEnd**-property reduces a low level kill experience. The **required experience** value of a level is determined by the **heroDifficulty**-property.
