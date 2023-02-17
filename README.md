@@ -3,10 +3,10 @@
 A commercial real-time strategy game project, that uses BabylonJS to run on WebGL. The project is open for community advices and contributions!
 
 # Flag System
-All Flags are listed in config/Types.js
+All **flags** are listed in config/Types.js
 
 # Faction System
-Every Ruler (Human, AI) can be assigned to a Party, that plays a certain Role in the game. Roles are Attacker, Defender, Neutral or None. None is used for Obstacles e.g. resources, contrary to a Neutral Party that can be attacked.
+Every **ruler** (Human, AI) can be assigned to a **party**, that plays a certain **role** in the game. The supported **roles** are Attacker, Defender, Neutral or None. None is used for **obstacles** e.g. resources, in contrary to a Neutral`rgb(128,128,0)` **party** that can be attacked.
 
 # Spawn, Conquest and Reinforce System
 
