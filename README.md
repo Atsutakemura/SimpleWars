@@ -56,7 +56,7 @@ Create **custom attachs** or **hardpoints** to interact with parts of entities. 
 Rectangular, Circular, Group
 
 # Navigation Systems
-Pathfinding is realized by **RecastJS**, where **NavMesh** is created out of ground mesh and **static** entities can be added as obstacles and **dynamic** entities are grouped in crowds as agents. The navigation allows entities to go **around** each other.
+Pathfinding is realized by **RecastJS**, where **NavMesh** is created out of ground mesh. Furthermore, **static** entities can be added as obstacles and **dynamic** entities are grouped in crowds as agents. The navigation allows entities to go **around** each other.
 
 The Command System offers the following **commands**: Move, Attack, (Re-)Gather, Craft, Patrol, Follow, Skill
 
