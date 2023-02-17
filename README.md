@@ -56,9 +56,9 @@ Create **custom attachs** or **hardpoints** to interact with parts of entities. 
 Rectangular, Circular, Group
 
 # Navigation Systems
-Pathfinding is realized by **RecastJS**, where **NavMesh** is created out of ground mesh and **static** entities can be added as obstacles and dynamic entities are grouped in crowds as agents. The navigation allows entities to go around each other.
+Pathfinding is realized by **RecastJS**, where **NavMesh** is created out of ground mesh and **static** entities can be added as obstacles and **dynamic** entities are grouped in crowds as agents. The navigation allows entities to go **around** each other.
 
-The Command System offers the following commands: Move, Attack, (Re-)Gather, Craft, Patrol, Follow, Skill
+The Command System offers the following **commands**: Move, Attack, (Re-)Gather, Craft, Patrol, Follow, Skill
 
 # Battle Systems
 
@@ -89,9 +89,12 @@ The camera can be **moved** by arrow keys and WASD. Rotation is apllied by EQ. T
 
 The **research** building allows to upgrade **technology**, that affects damage, health and shield.
 
+# Skill System
+The Skills (Melee, Ranged, Magic, Heal, Buff)
+
 # Hero System
-Skills (Melee, Ranged, Magic, Heal, Buff), Level.
-The hero **stats** are strength, affinity and agility. The **strength** affects physical damage, **affinity** modifies magical damage and heal. While **agility** is multiplies to attack speed.
+A hero can obtain experience to increase its level, while leveling difficulty can be adjusted. The higher **leveling**-property of GroundSystem the slower experiencing is in general. While the **levelingEnd**-property reduces a low level kill experience. The **required experience** value of a level is determined by the **heroDifficulty**-property.
+The **stats** are strength, affinity and agility. The **strength** affects physical damage, **affinity** modifies magical damage and heal. While **agility** is multiplies to attack speed.
 
 # Ground System
 
