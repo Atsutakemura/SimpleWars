@@ -53,7 +53,7 @@ Create **custom hardpoints** to interact with parts of entities. An hardpoint ca
 
 ![Rectangle Formation](https://user-images.githubusercontent.com/106460589/218611076-e0ea039f-a9e2-484b-91dd-238fe83731eb.png)
 
-Rectangular, Circular, Group
+The supported types are Rectangular and Circular.
 
 # Navigation Systems
 Pathfinding is realized by **RecastJS**, where **NavMesh** is created out of ground mesh. Furthermore, **static** entities can be added as obstacles and **dynamic** entities are grouped in crowds as agents. The navigation allows entities to go **around** each other.
@@ -168,8 +168,11 @@ Options:
 
 - Pathfinding issues if building and unit size relation too great
 
-# Demands
+# To-Do-List
 
 - 3rd Person Hero Control
-- Formation: Dynamic
-- Fog of War
+- AI
+
+# Not supported
+
+- Fog of War, kills performance on very large maps
