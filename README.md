@@ -12,26 +12,26 @@ Every **ruler** (Human, AI) can be assigned to a **party**, that plays a certain
 
 ![Spawn](https://user-images.githubusercontent.com/106460589/218605803-a097f630-f564-4174-a60d-c663aa4078af.png)
 
-Capture the Flag on Spawn using **HighlightLayer** or **GlowLayer** per Party.
+Capture the Flag on **spawn** can be colorized by **HighlightLayer** or **GlowLayer** per party.
 
 ![reinforce tab](https://user-images.githubusercontent.com/106460589/218619833-d4575145-36d6-490e-8085-3b19a6798bf0.png)
 
-You can spawn (reinforce) at conquered **spawn** i.e. spaceship drops ground infantry or vehicles. Projection will be red if out of spawn range.
+You can spawn (reinforce) at conquered **spawn** i.e. spaceship drops ground infantry or vehicles. The **projection** will be red if out of spawn range.
 
 # Resource System
-Create **custom resources**, that can be collected by Workers and refactored by Industry.
+Create **custom resources**, that can be **collected** by workers and **refactored** by industry.
 
 # Crafting System
 
 ![Craft Plane](https://user-images.githubusercontent.com/106460589/218614220-825f4e91-e5da-457c-a657-76b1ca90886b.png)
 
-**Planar foundation** is red if area on pointer is blocked and green when no obstacles intersecting with **construction site**. Additionally it is possible to **upgrade** building levels.
+**Planar foundation** can be moved by mouse pointer and **indicates** when obstacles are intersecting by red or green color. Additionally it is possible to **upgrade** the level of a building.
 
 # Hire System
 
 ![building](https://user-images.githubusercontent.com/106460589/218599026-4ee2d887-8480-4fba-b314-123437bcaff4.png)
 
-In the Barracks **unit** hirements can be queued.
+The barracks allows to **queue** unit hirements.
 
 # Movement Variants
 
@@ -41,13 +41,13 @@ Hover, Walk (Animated), Tracked (Dynamic UV Scaling), Flying
 
 ![sprint animations](https://user-images.githubusercontent.com/106460589/218614851-688e0ce0-4a52-4b15-a8b1-e53316ed2444.png)
 
-Idle, Sprint and Attack of **unit** is supported.
+**Idle, sprint and attack** of unit is supported.
 
 # Series System
 
 ![hps cruiser](https://user-images.githubusercontent.com/106460589/218625280-cfff62e8-5aa5-493c-b7d4-3686a6be2430.png)
 
-Create **custom attachs** or **hardpoints** to interact with parts of entities. The name of the entity's **main hull** is expected to be 'M_H'. Hardpoints can be interactive (targetable) or not (w/o GUI). They can even be weapons i.e. turrets that aims and attacks seperately. The preview [Selection Focus](https://github.com/Atsutakemura/ToolShop).
+Create **custom hardpoints** to interact with parts of entities. An hardpoint can also be an attached model e.g. individual turrets on a spaceship. The name of the entity's **main hull** is expected to be 'M_H'. Hardpoints can be interactive (targetable) or not (w/o GUI). They can even be weapons i.e. turrets that aims and attacks seperately. The preview [Selection Focus](https://github.com/Atsutakemura/ToolShop).
 
 # Formations Management
 
