@@ -19,6 +19,10 @@ Capture the Flag on **spawn** can be colorized by **HighlightLayer** or **GlowLa
 You can spawn (reinforce) at conquered **spawn** i.e. spaceship drops ground infantry or vehicles. The **projection** will be red if out of spawn range.
 
 # Resource System
+
+![Rock1](https://user-images.githubusercontent.com/106460589/220835009-a6f0fc3a-c454-4126-b039-01042d3b885b.png)
+
+
 Create **custom resources**, that can be **collected** by workers and **refactored** by industry.
 
 # Crafting System
