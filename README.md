@@ -172,11 +172,17 @@ Options:
 
 - Pathfinding issues if building and unit size relation too great
 
+# In Progress
+
+- 3rd Person Character Control
+- Skill movements by animation frames
+- Skill damaging by animation frames
+
 # To-Do-List
 
-- 3rd Person Hero Control
+- Skill Effects
 - AI
 
 # Not supported
 
-- Fog of War, kills performance on very large maps
+- Fog of War
