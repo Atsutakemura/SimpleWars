@@ -99,6 +99,11 @@ Skills can be **melee** e.g. whirlwind, heal or buff. While other skills are **r
 # Hero System
 A hero can obtain experience to increase its level, while leveling difficulty can be adjusted. The higher **leveling**-property of GroundSystem the slower experiencing is in general. While the **levelingEnd**-property reduces a low level kill experience. The **required experience** value of a level is determined by the **heroDifficulty**-property.
 The **stats** are strength, affinity and agility. The **strength** affects physical damage, **affinity** modifies magical damage and heal. While **agility** is multiplies to attack speed.
+The hero system also allows to switch to RPG game mode using a 3rd person camera and controller.
+
+## Combo System
+
+The combos make game flow into an action combat game.
 
 # Ground System
 
